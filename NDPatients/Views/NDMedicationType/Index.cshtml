@@ -1,0 +1,41 @@
+﻿@model IEnumerable<NDPatients.Models.MedicationType>
+
+@{
+    ViewData["Title"] = "List of Medication Types";
+}
+
+<h1>List of Medication Types</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<div style="color:red; font-weight:bold; font-size:large">@TempData["MedicationTypeIdError"]</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                <!--Link to Index action of Medication controller-->
+                <a asp-controller="NDMedication" asp-action="Index" asp-route-medicationTypeId="@item.MedicationTypeId" asp-route-medicationTypeName="@item.Name">
+                    @Html.DisplayFor(modelItem => item.Name)
+                </a>
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.MedicationTypeId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.MedicationTypeId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.MedicationTypeId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
