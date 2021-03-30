@@ -8,16 +8,16 @@
 
 # Implementation:
 1. Sorting and filtering:
-NDMedicationTypeController
-NDMedicationController
+    * NDMedicationTypeController
+    * NDMedicationController
 
 2. Dropdowns:
-NDPatientDiagnosisController
+    * NDPatientDiagnosisController
 
-3. Using Query String/ Cookie/ Session variables
-NDMedicationController
-NDPatientDiagnosisController
-NDPatientTreatmentController
+3. Using Query String/ Cookie/ Session variables:
+    * NDMedicationController
+    * NDPatientDiagnosisController
+    * NDPatientTreatmentController
 
 4. Model-Based Validation/ Self Validations & Class Libraries
-NDPatientController (in CRUD)
+    * NDPatientController (in CRUD)
